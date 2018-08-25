@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-const unused = "123";
+const unused = '123';
 
 class App extends Component {
   render() {
