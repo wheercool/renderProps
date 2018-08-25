@@ -4,6 +4,8 @@ import './App.css';
 
 const unused = '123';
 
+const v = 'testing';
+
 class App extends Component {
   render() {
     return (
