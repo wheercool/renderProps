@@ -1,0 +1,79 @@
+.App {
+    text-align: center;
+}
+
+.App-logo {
+    animation: App-logo-spin infinite 20s linear;
+    height: 80px;
+}
+
+.App-header {
+    background-color: #222;
+    height: 150px;
+    padding: 20px;
+    color: white;
+}
+
+.App-title {
+    font-size: 1.5em;
+}
+
+.App-intro {
+    font-size: large;
+}
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.user-info {
+    margin: 20px;
+    margin-left: auto;
+}
+.photo-card {
+    width: 300px;
+    height: 200px;
+    padding: 20px;
+    border: 1px solid black;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.photo-card__img-container {
+    flex: 1;
+    position: relative;
+    padding-top: 56.25%;
+    /*height: 100%;*/
+    overflow: hidden;
+}
+
+.photo-card__img {
+    position: absolute;
+    left: 50%;
+    right: 0;
+    bottom: 0;
+    top: 50%;
+    width: 100%;
+    height: auto;
+    transform: translate(-50%, -50%)
+}
+
+.photo-card__likes {
+    padding-top: 10px;
+}
+
+.photo-card__likes:before {
+    content: '\2764';
+    margin-right: 5px;
+}

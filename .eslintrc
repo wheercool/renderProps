@@ -3,6 +3,10 @@
     "react-app",
     "prettier"
   ],
+  "globals": {
+    "VK": true
+  },
+
   "rules": {
 //    "prettier/prettier": "error",
     "quotes": ["error", "single"],
