@@ -1,31 +1,36 @@
 import { User } from '../components/User';
 import React from 'react';
 import { connect } from 'react-redux';
-import { login } from '../actions/userActions';
+import { fakeAction, login } from '../actions/userActions';
 
 class UserContainer extends React.Component {
   render() {
     return (
-      <User
-        name={this.props.user.name}
-        error={this.props.userError}
-        isFetching={this.props.userFetching}
-        login={this.props.login}
-      />
+      <div>
+        <button onClick={this.props.fakeAction}>Fake action</button>
+        <User
+          name={this.props.user}
+          error={this.props.userError}
+          isFetching={this.props.userFetching}
+          login={this.props.login}
+        />
+      </div>
     );
   }
 }
 
 const mapStateToProps = store => {
+  console.log(store);
   return {
-    user: store.user,
+    user: store.user.name,
     userFetching: store.user.isFetching,
     userError: store.user.error
   };
 };
 
 const mapDispatchToProps = {
-  login
+  login,
+  fakeAction
 };
 
 export default connect(

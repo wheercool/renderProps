@@ -18,7 +18,8 @@ const loadAllPhotos = (callback, onError) => {
 
   const loadPhotos = offset =>
     VK.api(
-      'photos.getAll',
+      // 'photos.getAll',
+      'photos.getUserPhotos',
       {
         count: COUNT,
         extended: 1,

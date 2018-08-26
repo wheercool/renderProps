@@ -53,7 +53,9 @@
     "build": "node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom",
     "lint": "eslint src",
-    "precommit": "lint-staged"
+    "eslint-fix": "eslint src --fix",
+    "precommit": "lint-staged",
+    "eslint-check": "eslint --print-config . | eslint-config-prettier-check"
   },
   "devDependencies": {
     "eslint-config-prettier": "^3.0.1",

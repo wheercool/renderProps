@@ -1,4 +1,5 @@
 import {
+  FAKE_ACTION,
   LOGIN_FAIL,
   LOGIN_REQUEST,
   LOGIN_SUCCESS
@@ -7,7 +8,8 @@ import {
 const initialState = {
   isFetching: false,
   error: '',
-  name: ''
+  name: '',
+  fakeCounter: 0
 };
 
 export function userReducer(state = initialState, action) {
@@ -31,6 +33,12 @@ export function userReducer(state = initialState, action) {
         isFetching: false,
         error: action.payload.message
       };
+    case FAKE_ACTION: {
+      return {
+        ...state,
+        fakeCounter: state.fakeCounter + 1
+      };
+    }
     default:
       return state;
   }

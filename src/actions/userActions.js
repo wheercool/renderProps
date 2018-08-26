@@ -3,6 +3,7 @@ import { getYears } from './pageActions';
 export const LOGIN_REQUEST = 'LOGIN_REQUEST';
 export const LOGIN_SUCCESS = 'LOGIN_SUCCESS';
 export const LOGIN_FAIL = 'LOGIN_FAILE';
+export const FAKE_ACTION = 'FAKE_ACTION';
 
 export function login() {
   const PHOTO_PERMISSIONS = 4;
@@ -28,4 +29,12 @@ export function login() {
       }
     }, PHOTO_PERMISSIONS);
   };
+}
+
+export function fakeAction() {
+  console.log('click');
+  return dispatch =>
+    dispatch({
+      type: FAKE_ACTION
+    });
 }

@@ -8,9 +8,9 @@
   },
 
   "rules": {
-//    "prettier/prettier": "error",
-    "quotes": ["error", "single"],
-    "jsx-quotes": ["error", "prefer-double"],
+    "prettier/prettier": "error",
+//    "quotes": ["error", "single"],
+//    "jsx-quotes": ["error", "prefer-double"],
 
   },
   "plugins": ["prettier"]
